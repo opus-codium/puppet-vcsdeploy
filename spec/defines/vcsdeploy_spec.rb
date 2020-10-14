@@ -3,9 +3,12 @@
 require 'spec_helper'
 
 describe 'vcsdeploy' do
-  let(:title) { 'namevar' }
+  let(:title) { '/path/to/deployment' }
   let(:params) do
-    {}
+    {
+      source: 'https://github.com/opus-codium/puppet-vcsdeploy.git',
+      after_fetch_command: '/usr/local/bin/meta-vcsdeploy',
+    }
   end
 
   on_supported_os.each do |os, os_facts|
