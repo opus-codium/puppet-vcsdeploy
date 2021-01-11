@@ -27,14 +27,12 @@ define vcsdeploy (
   Enum[latest, present, absent] $ensure = latest,
   Stdlib::Absolutepath $target = $name,
   String[1] $revision = 'master',
-  String[1] $user = 'deploy',
-  String[1] $group = $user,
+  Optional[String[1]] $user = undef,
+  Optional[String[1]] $group = $user,
   Hash $vcsrepo_attributes = {},
   Hash $after_fetch_command_attributes = {},
   Array[Type[Resource]] $after_fetch_resources = [],
 ) {
-  ensure_resource('deploy', $user, {})
-
   $empty_target_file = "${target}/.vcsdeploy-up-to-date"
 
   file { $target:
