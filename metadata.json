@@ -2,9 +2,9 @@
   "name": "opuscodium-vcsdeploy",
   "version": "0.2.0",
   "author": "Romuald Conty",
-  "summary": "",
+  "summary": "Deploy an application from a repository and run command after fetch or update",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/opus-codium/puppet-vcsdeploy",
   "dependencies": [
     { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.13.0 < 7.0.0" }
   ],
