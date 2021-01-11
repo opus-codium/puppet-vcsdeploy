@@ -4,4 +4,4 @@ fixtures:
     stdlib: "puppetlabs/stdlib"
     vcsrepo: "puppetlabs/vcsrepo"
   symlinks:
-    bundle: "#{source_dir}"
+    vcsdeploy: "#{source_dir}"
