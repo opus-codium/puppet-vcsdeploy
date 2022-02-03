@@ -10,7 +10,7 @@
 
 ## Defined types
 
-### `vcsdeploy`
+### <a name="vcsdeploy"></a>`vcsdeploy`
 
 This defined type will deploy an application that comes from a repository.
 
@@ -30,21 +30,32 @@ vcsdeploy { '/path/to/application':
 
 #### Parameters
 
-The following parameters are available in the `vcsdeploy` defined type.
+The following parameters are available in the `vcsdeploy` defined type:
 
-##### `source`
+* [`source`](#source)
+* [`after_fetch_command`](#after_fetch_command)
+* [`ensure`](#ensure)
+* [`target`](#target)
+* [`revision`](#revision)
+* [`user`](#user)
+* [`group`](#group)
+* [`vcsrepo_attributes`](#vcsrepo_attributes)
+* [`after_fetch_command_attributes`](#after_fetch_command_attributes)
+* [`after_fetch_resources`](#after_fetch_resources)
+
+##### <a name="source"></a>`source`
 
 Data type: `String[1]`
 
 The source URI for the repository
 
-##### `after_fetch_command`
+##### <a name="after_fetch_command"></a>`after_fetch_command`
 
 Data type: `Stdlib::Absolutepath`
 
 The command to execute after VCS fetch
 
-##### `ensure`
+##### <a name="ensure"></a>`ensure`
 
 Data type: `Enum[latest, present, absent]`
 
@@ -52,7 +63,7 @@ Ensure the version control repository
 
 Default value: `latest`
 
-##### `target`
+##### <a name="target"></a>`target`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -60,7 +71,7 @@ The target path to fetch repository
 
 Default value: `$name`
 
-##### `revision`
+##### <a name="revision"></a>`revision`
 
 Data type: `String[1]`
 
@@ -68,7 +79,7 @@ The revision of the repository
 
 Default value: `'master'`
 
-##### `user`
+##### <a name="user"></a>`user`
 
 Data type: `Optional[String[1]]`
 
@@ -76,7 +87,7 @@ The user/uid that owns the repository files and run after fetch command
 
 Default value: ``undef``
 
-##### `group`
+##### <a name="group"></a>`group`
 
 Data type: `Optional[String[1]]`
 
@@ -84,7 +95,7 @@ The group/gid that owns the repository files and run after fetch command
 
 Default value: `$user`
 
-##### `vcsrepo_attributes`
+##### <a name="vcsrepo_attributes"></a>`vcsrepo_attributes`
 
 Data type: `Hash`
 
@@ -92,7 +103,7 @@ The additionnal attributes passed to `vcsrepo` resource
 
 Default value: `{}`
 
-##### `after_fetch_command_attributes`
+##### <a name="after_fetch_command_attributes"></a>`after_fetch_command_attributes`
 
 Data type: `Hash`
 
@@ -100,7 +111,7 @@ The additionnal attributes passed to `exec` resource
 
 Default value: `{}`
 
-##### `after_fetch_resources`
+##### <a name="after_fetch_resources"></a>`after_fetch_resources`
 
 Data type: `Array[Type[Resource]]`
 
