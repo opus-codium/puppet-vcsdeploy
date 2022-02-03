@@ -1,6 +1,6 @@
 {
   "name": "opuscodium-vcsdeploy",
-  "version": "1.0.0",
+  "version": "1.0.1-rc0",
   "author": "Romuald Conty",
   "summary": "Deploy an application from a repository and run command after fetch or update",
   "license": "Apache-2.0",
