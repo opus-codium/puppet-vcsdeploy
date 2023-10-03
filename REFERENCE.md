@@ -32,30 +32,30 @@ vcsdeploy { '/path/to/application':
 
 The following parameters are available in the `vcsdeploy` defined type:
 
-* [`source`](#source)
-* [`after_fetch_command`](#after_fetch_command)
-* [`ensure`](#ensure)
-* [`target`](#target)
-* [`revision`](#revision)
-* [`user`](#user)
-* [`group`](#group)
-* [`vcsrepo_attributes`](#vcsrepo_attributes)
-* [`after_fetch_command_attributes`](#after_fetch_command_attributes)
-* [`after_fetch_resources`](#after_fetch_resources)
+* [`source`](#-vcsdeploy--source)
+* [`after_fetch_command`](#-vcsdeploy--after_fetch_command)
+* [`ensure`](#-vcsdeploy--ensure)
+* [`target`](#-vcsdeploy--target)
+* [`revision`](#-vcsdeploy--revision)
+* [`user`](#-vcsdeploy--user)
+* [`group`](#-vcsdeploy--group)
+* [`vcsrepo_attributes`](#-vcsdeploy--vcsrepo_attributes)
+* [`after_fetch_command_attributes`](#-vcsdeploy--after_fetch_command_attributes)
+* [`after_fetch_resources`](#-vcsdeploy--after_fetch_resources)
 
-##### <a name="source"></a>`source`
+##### <a name="-vcsdeploy--source"></a>`source`
 
 Data type: `String[1]`
 
 The source URI for the repository
 
-##### <a name="after_fetch_command"></a>`after_fetch_command`
+##### <a name="-vcsdeploy--after_fetch_command"></a>`after_fetch_command`
 
 Data type: `Stdlib::Absolutepath`
 
 The command to execute after VCS fetch
 
-##### <a name="ensure"></a>`ensure`
+##### <a name="-vcsdeploy--ensure"></a>`ensure`
 
 Data type: `Enum[latest, present, absent]`
 
@@ -63,7 +63,7 @@ Ensure the version control repository
 
 Default value: `latest`
 
-##### <a name="target"></a>`target`
+##### <a name="-vcsdeploy--target"></a>`target`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -71,7 +71,7 @@ The target path to fetch repository
 
 Default value: `$name`
 
-##### <a name="revision"></a>`revision`
+##### <a name="-vcsdeploy--revision"></a>`revision`
 
 Data type: `String[1]`
 
@@ -79,15 +79,15 @@ The revision of the repository
 
 Default value: `'master'`
 
-##### <a name="user"></a>`user`
+##### <a name="-vcsdeploy--user"></a>`user`
 
 Data type: `Optional[String[1]]`
 
 The user/uid that owns the repository files and run after fetch command
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="group"></a>`group`
+##### <a name="-vcsdeploy--group"></a>`group`
 
 Data type: `Optional[String[1]]`
 
@@ -95,7 +95,7 @@ The group/gid that owns the repository files and run after fetch command
 
 Default value: `$user`
 
-##### <a name="vcsrepo_attributes"></a>`vcsrepo_attributes`
+##### <a name="-vcsdeploy--vcsrepo_attributes"></a>`vcsrepo_attributes`
 
 Data type: `Hash`
 
@@ -103,7 +103,7 @@ The additionnal attributes passed to `vcsrepo` resource
 
 Default value: `{}`
 
-##### <a name="after_fetch_command_attributes"></a>`after_fetch_command_attributes`
+##### <a name="-vcsdeploy--after_fetch_command_attributes"></a>`after_fetch_command_attributes`
 
 Data type: `Hash`
 
@@ -111,7 +111,7 @@ The additionnal attributes passed to `exec` resource
 
 Default value: `{}`
 
-##### <a name="after_fetch_resources"></a>`after_fetch_resources`
+##### <a name="-vcsdeploy--after_fetch_resources"></a>`after_fetch_resources`
 
 Data type: `Array[Type[Resource]]`
 
