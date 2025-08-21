@@ -1,7 +1,5 @@
 ---
 fixtures:
-  forge_modules:
-    stdlib: "puppetlabs/stdlib"
-    vcsrepo: "puppetlabs/vcsrepo"
-  symlinks:
-    vcsdeploy: "#{source_dir}"
+  repositories:
+    stdlib: https://github.com/puppetlabs/puppetlabs-stdlib.git
+    vcsrepo: https://github.com/puppetlabs/puppetlabs-vcsrepo.git
